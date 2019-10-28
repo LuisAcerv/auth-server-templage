@@ -11,8 +11,8 @@ def info():
 
     return json.dumps(info)
 
-def asset_info():
-    asset_info = api.listassets('GBP')
+def zpp_info():
+    asset_info = api.listassets('ZPP')
 
     logging.info(asset_info)
 

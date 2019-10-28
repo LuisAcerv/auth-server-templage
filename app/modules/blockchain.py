@@ -1,6 +1,6 @@
 import logging
 import json
-from app.tcp import api
+from app.rpc import api
 
 logging.basicConfig(level=logging.INFO)
 
@@ -10,3 +10,10 @@ def info():
     logging.info(info)
 
     return json.dumps(info)
+
+def asset_info():
+    asset_info = api.listassets('GBP')
+
+    logging.info(asset_info)
+
+    return json.dumps(asset_info)

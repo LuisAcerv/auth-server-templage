@@ -17,3 +17,12 @@ def zpp_info():
     logging.info(asset_info)
 
     return json.dumps(asset_info)
+
+
+def get_address_balance(data):
+    _data = json.load(data)
+    balance = api.getaddressbalances(_data['address'])
+
+    logging.info(balance)
+
+    return json.dumps(balance)

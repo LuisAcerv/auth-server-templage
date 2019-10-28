@@ -26,3 +26,9 @@ def get_address_balance(data):
     logging.info(balance)
 
     return json.dumps(balance)
+
+def issue_from_original_address(data):
+    _data = json.load(data)
+    address = _data['address']
+
+    return json.dumps({'hello':'world'})

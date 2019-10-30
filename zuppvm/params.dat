@@ -110,4 +110,4 @@ genesis-nbits = 536936447               # Genesis block difficulty (nBits).
 genesis-nonce = 1109                    # Genesis block nonce.
 genesis-pubkey-hash = 296947d665f5f1fd0f2a578ed52f3fc601096241 # Genesis block coinbase output public key hash.
 genesis-hash = 00e3c853b09e482e0a0cff2a571cfe4be9394dfb357a3c45b8cbdb964174376e # Genesis block hash.
-chain-para
+chain-params-hash = 31e2cf72a23290902259ed9405d3e4475d4b50a875224dd44558045c6c2a68bb # Hash of blockchain parameters, to prevent accidental changes.

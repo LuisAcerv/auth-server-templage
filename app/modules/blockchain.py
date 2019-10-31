@@ -32,3 +32,18 @@ def issue_from_original_address(data):
     address = _data['address']
 
     return json.dumps({'hello':'world'})
+
+def create_key_pairs(data):
+    pass
+
+def create_stream(data):
+    pass
+
+def get_new_address(data):
+    pass
+
+def get_stream(data):
+    pass
+
+def get_address_streams(data):
+    pass

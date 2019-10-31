@@ -61,4 +61,5 @@ exit
 [ -e app/.env ] && rm app/.env
 docker exec -ti zuppvm /bin/bash -c 'cd && cat ~/.multichain/root/multichain.conf' >> app/.env
 docker exec -ti zuppvm /bin/bash -c 'multichain-cli root getinfo' >> app/blockchaininfo.json
+sed -i '1d' app/blockchaininfo.json 
 echo '\e[1;32m'Zupp virtual machine is running'\e[0m'

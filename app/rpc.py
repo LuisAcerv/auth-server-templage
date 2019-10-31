@@ -1,16 +1,21 @@
-import os
+import sys, os, json
 
 from Savoir import Savoir
 from dotenv import load_dotenv
 from pathlib import Path 
 
-env_path = Path('.') / '.env'
-load_dotenv(dotenv_path=env_path)
+THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
+config = os.path.join(THIS_FOLDER, 'blockchaininfo.json')
+load_dotenv()
 
-rpcuser='multichainrpc'
-rpcpassword=os.getenv('rpcpassword')
-rpchost = '172.17.0.2'
-rpcport = '4346'
-chainname = 'mainchain-dev'
+print(os.getenv('rpcpassword'))
+with open(config) as info:
+    data = json.load(info)
+    print(data)
+    rpcuser='multichainrpc'
+    rpcpassword=os.getenv('rpcpassword')
+    rpchost = str(data['nodeaddress'].split('@')[1].split(':')[0])
+    rpcport = str(data['port'] - 1)
+    chainname = 'root'
 
-api = Savoir(rpcuser, rpcpassword, rpchost, rpcport, chainname)
+    api = Savoir(rpcuser, rpcpassword, rpchost, rpcport, chainname)

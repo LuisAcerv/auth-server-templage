@@ -57,7 +57,8 @@ multichain-cli root subscribe zupp
 multichain-cli root publish zupp 'Welcome to zupp' 48656C6C6F20576F726C64210A
 exit
 """
-rm .env
+[ -e app/blockchaininfo.json ] && rm app/blockchaininfo.json
+[ -e app/.env ] && rm app/.env
 docker exec -ti zuppvm /bin/bash -c 'cd && cat ~/.multichain/root/multichain.conf' >> app/.env
 docker exec -ti zuppvm /bin/bash -c 'multichain-cli root getinfo' >> app/blockchaininfo.json
 echo '\e[1;32m'Zupp virtual machine is running'\e[0m'

@@ -19,7 +19,7 @@ class HandleCORS(object):
 
 """ Process the GET requests
 """
-class ProcessGetResource(object):
+class ProcessResource(object):
     def on_get(self, req, res, module, method):
         # Add modules path
         sys.path.insert(0, f'{os.getcwd()}/app/modules')
@@ -84,8 +84,8 @@ class ProcessGetResource(object):
 # Create the Falcon application object
 app = falcon.API(middleware=[HandleCORS()])
 
-# Instantiate the ProcessGetResource class
-get_resource = ProcessGetResource()
+# Instantiate the ProcessResource class
+get_resource = ProcessResource()
 
 # Routes
 app.add_route('/api/v1/{module}/{method}', get_resource)

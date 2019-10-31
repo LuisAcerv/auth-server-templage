@@ -38,6 +38,12 @@ def create_key_pairs():
     logging.info(keypairs)
     return json.dumps(keypairs)
 
+def create_stream_from(data):
+    _data = json.load(data)
+    address = _data['address']
+    name = _data['name']
+    result = api.createfrom(address, 'stream', name)
+
 def create_stream(data):
     pass
 

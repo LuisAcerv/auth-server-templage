@@ -27,7 +27,7 @@ class ProcessGetResource(object):
         # Import request module
         mod = None
         f = None
-        print(importlib.import_module(module))
+
         try:
             mod = importlib.import_module(module)
         except:

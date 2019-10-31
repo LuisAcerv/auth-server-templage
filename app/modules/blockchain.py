@@ -33,8 +33,10 @@ def issue_from_original_address(data):
 
     return json.dumps({'hello':'world'})
 
-def create_key_pairs(data):
-    pass
+def create_key_pairs():
+    keypairs = api.createkeypairs()
+    logging.info(keypairs)
+    return json.dumps(keypairs)
 
 def create_stream(data):
     pass

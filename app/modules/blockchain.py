@@ -55,3 +55,16 @@ def get_stream(data):
 
 def get_address_streams(data):
     pass
+
+def publishfrom(data):
+    _data = json.load(data)
+    from_address = _data['address']
+    stream = _data['stream']
+    keys = _data['keys']
+    d = _data['data']
+    
+    tx_hash = api.publishfrom(from_address, stream, keys, d)
+    
+    logging.info(tx_hash)
+    return json.dumps(tx_hash)
+    

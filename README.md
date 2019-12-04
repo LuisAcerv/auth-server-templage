@@ -1,11 +1,13 @@
-# Create network
-`sh zuppvm/init.sh`
+# Auth Service
 
-# Run server
-`sh run-server.sh`
+# Env
 
-# Issue from
-`issuefrom ORIGINAL_ADDRESS ORIGINAL_ADDRESS '{"name":"ASSET_NAME","open":true}' 50000 0.01 0 '{"origin":"ORIGN", "stage":"01", "purpose":"network payments"}'`
+# Email and password credentials
+- Email verification
+- Password hashing
 
-# Issue more from
-`issuemorefrom FROM_ADDRESS TO_ADDRESS GBP 25000 0 '{"origin":"ORIGIN", "stage":"02", "approval":"department"}'`
+# SMS Registration
+
+# Facebook
+
+# Google

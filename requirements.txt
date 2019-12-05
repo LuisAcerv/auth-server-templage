@@ -22,7 +22,7 @@ Faker==0.8.11
 faker-schema==0.1.4
 falcon==2.0.0
 falcon-cors==1.1.7
-Flask==1.0.0
+Flask==1.1.1
 gevent==1.4.0
 gevent-websocket==0.10.1
 greenlet==0.4.15

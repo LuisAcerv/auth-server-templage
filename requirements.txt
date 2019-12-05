@@ -16,7 +16,7 @@ console-log==0.2.10
 constantly==15.1.0
 dnspython==1.16.0
 docutils==0.15.2
-ecdsa==0.13.3
+ecdsa==0.14.1
 eventlet==0.25.1
 Faker==0.8.11
 faker-schema==0.1.4

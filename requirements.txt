@@ -53,7 +53,7 @@ pipenv==2018.11.26
 pluggy==0.6.0
 pprint==0.1
 psycopg2==2.8.3
-py==1.8.0
+py==1.10.0
 PyExecJS==1.5.1
 PyHamcrest==1.9.0
 PyJWT==1.7.1
